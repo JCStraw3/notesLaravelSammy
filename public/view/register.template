@@ -1,0 +1,21 @@
+<div>
+	<div>
+		<input id='name' name='name' type='text' placeholder='Name'>
+	</div>
+
+	<div>
+		<input id='email' name='email' type='email' placeholder='Email'>
+	</div>
+
+	<div>
+		<input id='password' name='password' type='password' placeholder='Password'>
+	</div>
+
+	<div>
+		<input id='password_confirmation' name='password_confirmation' type='password' placeholder='Confirm Password'>
+	</div>
+
+	<div>
+		<button id='register'>Register</button>
+	</div>
+</div>

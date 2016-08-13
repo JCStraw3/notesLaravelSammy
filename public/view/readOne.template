@@ -1,0 +1,27 @@
+<div id='note'>
+	<p><%= note.title %></p>
+
+	<p><%= note.body %></p>
+</div>
+
+<div>
+	<button id='delete'>Delete</button>
+</div>
+
+<div id='edit-note'>
+	<div>
+		<input id='id' name='id' type='hidden' value='<%= note.id %>'>
+	</div>
+
+	<div>
+		<input id='title' name='title' type='text' placeholder='Title' value='<%= note.title %>'>
+	</div>
+
+	<div>
+		<textarea id='body' name='body' placeholder='Body'><%= note.body %></textarea>
+	</div>
+
+	<div>
+		<button id='update'>Save</button>
+	</div>
+</div>

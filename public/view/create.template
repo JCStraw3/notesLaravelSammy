@@ -1,0 +1,13 @@
+<div>
+	<div>
+		<input id='title' name='title' type='text' placeholder='Title'>
+	</div>
+
+	<div>
+		<textarea id='body' name='body' placeholder='Body'></textarea>
+	</div>
+	
+	<div>
+		<button id='create'>Create</button>
+	</div>
+</div>

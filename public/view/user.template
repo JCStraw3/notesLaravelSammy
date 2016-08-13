@@ -1,0 +1,7 @@
+<div id='user'>
+
+	<p><%= user.name %></p>
+
+	<p><%= user.email %></p>
+
+</div>
