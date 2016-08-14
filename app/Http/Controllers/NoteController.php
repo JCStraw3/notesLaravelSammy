@@ -12,15 +12,6 @@ use Auth;
 
 class NoteController extends Controller {
 
-	public function viewCreate(){
-
-		$user = Auth::user();
-
-		var_dump($user);
-
-		return view('create');
-	}
-
 	public function create(Requests\CreateNoteRequest $request){
 
 		$note = new Note($request->all());
