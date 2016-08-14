@@ -43,5 +43,11 @@ class User extends Model implements AuthenticatableContract,
         'password', 
         'remember_token'
     ];
+
+    // A user has many notes.
+
+    public function notes(){
+        return $this->hasMany('App\Note');
+    }
     
 }

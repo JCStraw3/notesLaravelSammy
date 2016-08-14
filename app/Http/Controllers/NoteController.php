@@ -3,21 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
 use App\Note;
 
+use Auth;
+
 class NoteController extends Controller {
+
+	public function viewCreate(){
+
+		$user = Auth::user();
+
+		var_dump($user);
+
+		return view('create');
+	}
 
 	public function create(Requests\CreateNoteRequest $request){
 
-		$note = new Note([
-			'title' => $request->title,
-			'body' => $request->body,
-		]);
+		$note = new Note($request->all());
 
-		$note->save();
+		Auth::user()->notes()->save($note);
 
 		return json_encode($note);
 
@@ -25,7 +33,9 @@ class NoteController extends Controller {
 
 	public function readMany(){
 
-		$notes = Note::latest()->get();
+		$user = Auth::user();
+
+		$notes = Note::where('user_id', '=', $user->id)->latest()->get();
 
 		return json_encode($notes);
 
