@@ -46,9 +46,11 @@ class NoteController extends Controller {
 
 	public function update(Requests\UpdateNoteRequest $request){
 
+		$user = Auth::user();
+
 		$id = $request->id;
 
-		$note = Note::findOrFail($id);
+		$note = Note::where('user_id', '=', $user->id)->findOrFail($id);
 
 		$note->update([
 			'title' => $request->title,
