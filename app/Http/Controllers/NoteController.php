@@ -34,9 +34,11 @@ class NoteController extends Controller {
 
 	public function readOne(Request $request){
 
+		$user = Auth::user();
+
 		$id = $request->input('id');
 
-		$note = Note::findOrFail($id);
+		$note = Note::where('user_id', '=', $user->id)->findOrFail($id);
 
 		return json_encode($note);
 
