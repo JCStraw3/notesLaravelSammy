@@ -16,17 +16,7 @@ class UserController extends Controller {
 
 		$id = $request->input('id');
 
-		$authuser = Auth::user();
-
-		// if(!$id){
-		// 	$id = $authuser->id;
-		// }
-
 		$user = User::findOrFail($id);
-
-		// if($authuser->id !== $user->id){
-		// 	return redirect('/view/404.template');
-		// }
 
 		return json_encode($user);
 
