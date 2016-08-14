@@ -5,13 +5,6 @@
 	app.get('#/', function(context, next){
 
 		$.getJSON('/readMany.json', function(data){
-			
-			context.render('/view/nav.template', {
-				//
-			}, function(output){
-				$('#header').html(output);
-			});
-
 			context.render('/view/readMany.template', {
 				notes: data,
 			}, function(output){

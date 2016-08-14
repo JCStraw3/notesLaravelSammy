@@ -3,13 +3,6 @@
 	var app = Sammy.apps.body;
 
 	app.get('#/login', function(context){
-		
-		context.render('/view/nav.template', {
-			//
-		}, function(output){
-			$('#header').html(output);
-		});
-
 		context.render('/view/login.template', {
 			//
 		}, function(output){

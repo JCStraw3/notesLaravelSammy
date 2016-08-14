@@ -8,13 +8,6 @@
 
 		$.getJSON('/readOne.json', {id})
 			.done(function(data){
-				
-				context.render('/view/nav.template', {
-					//
-				}, function(output){
-					$('#header').html(output);
-				});
-
 				context.render('/view/readOne.template', {
 					note: data,
 				}, function(output){

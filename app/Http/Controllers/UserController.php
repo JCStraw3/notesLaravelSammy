@@ -16,6 +16,12 @@ class UserController extends Controller {
 
 		$id = $request->input('id');
 
+		$authuser = Auth::user();
+
+		if(!$id){
+			$id = $authuser->id;
+		}
+
 		$user = User::findOrFail($id);
 
 		return json_encode($user);
