@@ -1,6 +1,6 @@
 <% for(var i=0; i<notes.length; i++){ %>
 	<div id='<%= notes[i].id %>'>
-		<a href='#/note/<%= notes[i].id %>'>
+		<a href='#/note?id=<%= notes[i].id %>'>
 			<p><%= notes[i].title %></p>
 		</a>
 
