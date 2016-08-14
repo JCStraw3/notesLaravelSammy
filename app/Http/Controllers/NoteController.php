@@ -31,7 +31,9 @@ class NoteController extends Controller {
 
 	}
 
-	public function readOne($id){
+	public function readOne(Request $request){
+
+		$id = $request->input('id');
 
 		$note = Note::findOrFail($id);
 

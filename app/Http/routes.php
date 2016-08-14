@@ -37,7 +37,7 @@ Route::get('/user.json', 'UserController@readOne');
 // Notes routes.
 
 Route::get('/readMany.json', 'NoteController@readMany');
-Route::get('/readOne.json/{id}', 'NoteController@readOne');
+Route::get('/readOne.json', 'NoteController@readOne');
 Route::post('/create.json', 'NoteController@create');
 Route::put('/update.json', 'NoteController@update');
 Route::delete('/delete.json', 'NoteController@delete');

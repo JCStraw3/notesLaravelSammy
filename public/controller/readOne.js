@@ -2,11 +2,11 @@
 
 	var app = Sammy.apps.body;
 
-	app.get('#/note/:id', function(context){
+	app.get('#/note', function(context){
 
 		var id = context.params.id;
 
-		$.getJSON('/readOne.json/' + id)
+		$.getJSON('/readOne.json', {id})
 			.done(function(data){
 				
 				context.render('/view/nav.template', {
