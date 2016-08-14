@@ -16,9 +16,7 @@ class UserController extends Controller {
 
 		$id = $request->input('id');
 
-		var_dump($request->user);
-
-		// $authuser = Auth::user();
+		$authuser = Auth::user();
 
 		// if(!$id){
 		// 	$id = $authuser->id;

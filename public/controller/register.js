@@ -37,7 +37,6 @@
 				})
 				.done(function(context){
 					console.log('Successful user creation.');
-					alert('You have registered a new user.');
 				});
 
 			});

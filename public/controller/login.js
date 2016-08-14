@@ -35,7 +35,6 @@
 				})
 				.done(function(context){
 					console.log('Successful login.');
-					alert('You have logged in.');
 				});
 
 			});
