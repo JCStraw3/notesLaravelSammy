@@ -21,6 +21,12 @@
 					$('#header').html(output);
 				});
 				next();
+			})
+			.fail(function(){
+				context.render('/view/nav2.template', function(output){
+					$('#header').html(output);
+				});
+				next();
 			});
 	});
 
