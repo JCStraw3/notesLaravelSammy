@@ -12,6 +12,33 @@
 					user: data,
 				}, function(output){
 					$('#content').html(output);
+
+					// Update the user in the database.
+					
+					$('#update').click(function(event){
+
+						var action = '/userUpdate.json';
+
+						var updateUser = {
+							id: $('#id').val(),
+							name: $('#name').val(),
+							email: $('#email').val(),
+							_method: 'put',
+						}
+
+						$.ajax({
+							url: action,
+							method: 'post',
+							data: updateUser,
+							error: function(result){
+								console.log(result);
+							}
+						})
+						.done(function(context){
+							alert('Saved.');
+						});
+
+					});
 				});
 			});
 		

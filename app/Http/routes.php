@@ -33,6 +33,7 @@ Route::get('/logout.json', 'Auth\AuthController@getLogout');
 // User routes.
 
 Route::get('/user.json', 'UserController@readOne');
+Route::put('/userUpdate.json', 'UserController@update');
 
 // Notes routes.
 

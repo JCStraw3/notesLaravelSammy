@@ -5,3 +5,21 @@
 	<p><%= user.email %></p>
 
 </div>
+
+<div id='edit-user'>
+	<div>
+		<input id='id' name='id' type='hidden' value='<%= user.id %>'>
+	</div>
+
+	<div>
+		<input id='name' name='name' type='text' placeholder='Name' value='<%= user.name %>'>
+	</div>
+
+	<div>
+		<textarea id='email' name='email' placeholder='Email'><%= user.email %></textarea>
+	</div>
+
+	<div>
+		<button id='update'>Save</button>
+	</div>
+</div>

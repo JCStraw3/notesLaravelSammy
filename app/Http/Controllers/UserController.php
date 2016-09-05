@@ -28,4 +28,22 @@ class UserController extends Controller {
 
 	}
 
+	public function update(Request $request){
+
+		$id = $request->input('id');
+
+		$authuser = Auth::user();
+
+		$user = User::findOrFail($id);
+
+		$user->update([
+			'name' => $request->name,
+			'email' => $request->email,
+			'updated_at' => $request->updated_at,
+		]);
+
+		return json_encode($user);
+
+	}
+
 }
