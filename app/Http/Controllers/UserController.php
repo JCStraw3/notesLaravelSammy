@@ -32,7 +32,7 @@ class UserController extends Controller {
 
 		$id = $request->input('id');
 
-		$authuser = Auth::user();
+		// TODO: Add authentication so logged in user can only update itself.
 
 		$user = User::findOrFail($id);
 
